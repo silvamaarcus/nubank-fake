@@ -1,4 +1,5 @@
 // Tipogafria do Projeto
+// Tamanho e cores das fontes estão estabelecidas em prototipagem no Figma.
 
 // Tipo de fonte: Títulos
 @mixin typeface-1($size, $device: desktop) {
@@ -78,4 +79,90 @@
     font-size: 14px;
     line-height: 150%;
   }
+}
+
+//Estabelecendo configurações para textos
+h1 {
+  color: $black-dark;
+  @include typeface-1(h1, desktop);
+
+  @include responsive(s) {
+    @include typeface-1(h1, mobile);
+  }
+}
+
+h2 {
+  color: $black-dark;
+  @include typeface-1(h2, desktop);
+
+  @include responsive(s) {
+    @include typeface-1(h2, mobile);
+  }
+}
+
+h3 {
+  color: $black-dark;
+  @include typeface-1(h3, desktop);
+
+  @include responsive(s) {
+    @include typeface-1(h3, mobile);
+  }
+}
+
+h4 {
+  color: $black-dark;
+  @include typeface-1(h4, desktop);
+
+  @include responsive(s) {
+    @include typeface-1(h4, mobile);
+  }
+}
+
+// h5 foi definido no figma com duas cores linear.
+h5 {
+  text-transform: uppercase; //T texto em caixa alta
+  background: linear-gradient(
+    220.94deg,
+    $secondary-normal 14.43%,
+    $primary-normal 85.28%
+  ); // efeito de duas cores
+
+  // aplicar o efeito de cores com uso de máscara
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: bold;
+
+  color: $black-dark;
+
+  @include typeface-1(h5, desktop);
+  @include responsive(s) {
+    @include typeface-1(h5, mobile);
+  }
+}
+
+p {
+  color: $gray-3;
+  @include typeface-2(p2, desktop);
+  @include responsive(s) {
+    @include typeface-2(p2, mobile);
+  }
+}
+
+.bold {
+  font-weight: bold;
+  color: $black-light;
+}
+
+.strong {
+  color: $black-dark;
+  @include typeface-2(p2, desktop);
+  @include responsive(s) {
+    @include typeface-2(p2, mobile);
+  }
+}
+
+.text-center {
+  text-align: center;
 }
