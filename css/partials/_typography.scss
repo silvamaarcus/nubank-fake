@@ -1,0 +1,81 @@
+// Tipogafria do Projeto
+
+// Tipo de fonte: Títulos
+@mixin typeface-1($size, $device: desktop) {
+  font-family: "Sora", sans-serif;
+
+  // h1
+  @if $size == h1 and $device == desktop {
+    font-size: 64px;
+    line-height: 100%;
+  } @else if $size == h1 and $device == mobile {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  // h2
+  @else if $size == h2 and $device == desktop {
+    font-size: 52px;
+    line-height: 100%;
+  } @else if $size == h2 and $device == mobile {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  // h3
+  @else if $size == h3 and $device == desktop {
+    font-size: 36px;
+    line-height: 100%;
+  } @else if $size == h3 and $device == mobile {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  // h4
+  @else if $size == h4 and $device == desktop {
+    font-size: 24px;
+    line-height: 100%;
+  } @else if $size == h4 and $device == mobile {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  // h5
+  @else if $size == h5 and $device == desktop {
+    font-size: 18px;
+    line-height: 100%;
+  } @else if $size == h5 and $device == mobile {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+// Tipo de fonte: Corpo de Texto
+@mixin typeface-2($size: p2, $device: desktop) {
+  font-family: "Source Sans 3", sans-serif;
+
+  // p1
+  @if $size == p1 and $device == desktop {
+    font-size: 24px;
+    line-height: 130%;
+  } @else if $size == p1 and $device == mobile {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  // p2
+  @else if $size == p2 and $device == desktop {
+    font-size: 16px;
+    line-height: 140%;
+  } @else if $size == p2 and $device == mobile {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  // p3
+  @else if $size == p3 and $device == desktop {
+    font-size: 14px;
+    line-height: 150%;
+  } @else if $size == p3 and $device == mobile {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
