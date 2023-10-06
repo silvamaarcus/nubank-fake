@@ -1,0 +1,43 @@
+// Configuração de layout do Projeto p/ tamanhos de telas distintos.
+
+// Container EXTRA-GRANDE
+$container-xl: 1440px;
+// Container GRANDE
+$container-l: 1140px;
+// Container MEDIO
+$container-m: 960px; 
+// Container PEQUENO
+$container-s: 540px; 
+
+// Mixins para Responsividade
+@mixin responsive($device) {
+  @if $device == xl {
+    // Aplicar layout p/ telas com resoluções maiores que 1440px
+    @media screen and (min-width: $container-xl) {
+      @content; // Setar estilos estabelecidos na tag especifica do CSS. 
+    }
+  } @else if $device == l {
+    // Aplicar layout p/ telas com resoluções entre que 1440px e 1140px
+    @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+      @content;
+    }
+  }
+  @else if $device == m {
+    // Aplicar layout p/ telas com resoluções entre que 1140px e 960px
+    @media screen and (max-width: $container-l) and (min-width: $container-m) {
+      @content;
+    }
+  }
+  @else if $device == s {
+    // Aplicar layout p/ telas com resolução menor que 960px
+    @media screen and (max-width: $container-m) {
+      @content;
+    }
+  }
+  @else if $device == xs {
+    // Aplicar layout p/ telas com resolução menor que 540px
+    @media screen and (max-width: $container-s) {
+      @content;
+    }
+  }
+}
