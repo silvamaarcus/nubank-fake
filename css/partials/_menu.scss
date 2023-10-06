@@ -36,13 +36,15 @@ header {
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background-color: red;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 800;
 }
 
 .navbar-desktop-item-1 {
@@ -124,7 +126,7 @@ header {
   flex-direction: column;
   align-items: center;
 
-  // Esconder o Menu Dropdown em estado 0.
+  // Esconder o Menu Dropdown em estado original.
   opacity: 0;
   pointer-events: none;
   transition: 0.7 ease; // Animção para quando o Menu Dropdown aparecer.
@@ -150,7 +152,7 @@ header {
   &::after {
     content: "";
     position: absolute;
-    top: 90%; // para que fique sempre abaixo
+    top: 90%; // Para que fique sempre abaixo
     left: 0;
 
     width: 0%;
@@ -170,17 +172,153 @@ header {
 
 // Menu Mobile
 .navbar-mobile {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 10px 24px;
+
+  // Navbar mobile começa escondido
   display: none;
 
   @include responsive(s) {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Estilo do Menu Hamburguer
+.bx {
+  width: 36px;
+  height: 36px;
+
+  position: relative;
+  cursor: pointer;
+  z-index: 800;
+  transition: 0.7s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 17%;
+
+    width: 70%;
+    height: 2px;
+
+    background-color: $primary-normal;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 64%;
+    left: 17%;
+
+    width: 70%;
+    height: 2px;
+    transition: 0.7s ease;
+
+    background-color: $primary-normal;
+  }
+}
+// Animar Menu Hamburguer ao clicar nele, uso de JS.
+.active-bx {
+  width: 36px;
+  height: 36px;
+
+  position: relative;
+  cursor: pointer;
+  z-index: 800;
+  transition: 0.7s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%; // alinhar ao centro
+    left: 17%;
+
+    transform: rotate(-135deg); // rotacionar o after
+
+    width: 70%;
+    height: 2px;
+
+    background-color: $primary-normal;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%; // alinhar ao centro
+    left: 17%;
+
+    transform: rotate(315deg); // rotacionar o before
+
+    width: 70%;
+    height: 2px;
+
+    background-color: $primary-normal;
   }
 }
 
 .menu-mobile {
-  display: none;
+  width: 100vw;
+  height: 100vh;
 
-  @include responsive(s) {
-    display: block;
+  background-color: $white-normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Esconder o Menu Mobile em estado original.
+  opacity: 0;
+  pointer-events: none;
+
+  // Subir a posição do Menu Mobile, quando acionado.
+  transform: translate3d(0, -100px, 0);
+
+  transition: 1s ease;
+}
+// Mostrar o Menu Mobile ao clicar no Hamburger, uso de JS.
+.active-menu-mobile {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-list-mobile {
+  max-width: $container-xl;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+// Estilo para link do Menu Mobile
+.nav-link-mobile {
+  display: inline-block;
+  @include typeface-1(h3, desktop);
+  color: $gray-2;
+
+  padding: 16px 24px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 16px;
+
+    width: 0%;
+    height: 2px;
+    transition: 1s ease;
+
+    background-color: $secondary-normal;
+  }
+  &:hover {
+    color: $primary-normal;
+
+    &::after {
+      width: 100%;
+    }
   }
 }

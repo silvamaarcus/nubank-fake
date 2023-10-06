@@ -1,3 +1,5 @@
+// ------------ MENU DESKTOP ------------
+
 // Função para ativar estilo no cabeçalho ao rolar o mouse (Scroll)
 function scrollHeader() {
   const nav = document.getElementById("header");
@@ -56,3 +58,19 @@ menuItem3.addEventListener("click", ShowDropdown3);
 dropdownMenu1.addEventListener("mouseleave", RemoveDropdown);
 dropdownMenu2.addEventListener("mouseleave", RemoveDropdown);
 dropdownMenu3.addEventListener("mouseleave", RemoveDropdown);
+
+// ------------ MENU MOBILE ------------
+
+// Função para animar Menu Hamburguer ao clicar nele.
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId);
+  const nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active-menu-mobile");
+      toggle.classList.toggle("active-bx");
+    });
+  }
+};
+showMenu("bx", "menu-mobile");
