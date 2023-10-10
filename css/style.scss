@@ -13,6 +13,7 @@
 @import "partials/spacing";
 
 html {
+  // Scrool mais suave de transição
   scroll-behavior: smooth;
 }
 
@@ -24,7 +25,7 @@ body {
 }
 
 svg,
-image {
+img {
   display: block;
   width: 100%;
 }
