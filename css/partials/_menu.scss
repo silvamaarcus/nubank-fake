@@ -289,6 +289,23 @@ header {
   list-style: none;
   display: flex;
   flex-direction: column;
+
+  // Estilizando svg dentro da tag 'nav-list-mobile'
+  svg {
+    width: 36px;
+    height: 36px;
+
+    // Método para estilizar imagem svg usando o SVG-Inject
+    path {
+      stroke: $gray-7;
+      transition: 0.7s ease;
+    }
+    &:hover {
+      path {
+        stroke: $primary-normal;
+      }
+    }
+  }
 }
 
 // Estilo para link do Menu Mobile

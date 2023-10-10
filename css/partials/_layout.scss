@@ -39,26 +39,6 @@ $container-s: 540px;
   }
 }
 
-.container {
-  max-width: $container-xl;
-  margin: 0 auto;
-  padding: 96px 24px;
-
-  display: flex; // elementos um ao lado do outro
-  justify-content: center; // centralizar elementos horizontalmente
-  align-items: center; // centralizar elementos verticalmente
-
-  overflow: hidden; //esconder barra de rolagem
-
-  flex-direction: row; // elementos com direção em linha
-
-  // aplicando responsividade
-  @include responsive(s) {
-    flex-direction: column; // elementos com direção em coluna (tela menor)
-    padding: 32px 18px;
-  }
-}
-
 // 1) Biblioteca Diversos
 
 // 1.1) Esconder barra de rolagem.
@@ -142,4 +122,31 @@ $container-s: 540px;
   width: 25%;
 }
 
-// 5) 
+.container {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 96px 24px;
+
+  display: flex; // elementos um ao lado do outro
+  justify-content: center; // centralizar elementos horizontalmente
+  align-items: center; // centralizar elementos verticalmente
+
+  overflow: hidden; //esconder barra de rolagem
+
+  flex-direction: row; // elementos com direção em linha
+
+  // aplicando responsividade
+  @include responsive(s) {
+    flex-direction: column; // elementos com direção em coluna (tela menor)
+    padding: 32px 18px;
+  }
+}
+
+.hero {
+  height: 90vh;
+
+  // Aplicar responsividade de acordo com a tela do usuário.
+  @include responsive(s) {
+    height: auto;
+  }
+}
