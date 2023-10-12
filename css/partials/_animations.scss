@@ -116,7 +116,6 @@ $height-card: 0.63 * $width-card;
   }
 }
 
-
 // Estilo para o fundo da section Hero (Retangulos brancos)
 .bg-home-blur1 {
   transform: translate3d(0, -100px, 0);
@@ -144,5 +143,50 @@ $height-card: 0.63 * $width-card;
   }
   100% {
     transform: translate3d(0, 30px, 0);
+  }
+}
+
+// Section People
+.people1 {
+  opacity: 0;
+  animation: people 10s ease 0s infinite;
+}
+.people2 {
+  opacity: 0;
+  animation: people 10s ease 5s infinite;
+}
+.people3 {
+  opacity: 0;
+  animation: people 10s ease 2s infinite;
+}
+.people4 {
+  opacity: 0;
+  animation: people 10s ease 7s infinite;
+}
+.people5 {
+  opacity: 0;
+  animation: people 10s ease 3s infinite;
+}
+.people6 {
+  opacity: 0;
+  animation: people 10s ease 8s infinite;
+}
+
+// Id será desligao ao entrar em tela menor.
+#people2 {
+  @include responsive (s) {
+    display: none;
+  }
+}
+
+@keyframes people {
+  0% {
+    opacity: 0;
+  }
+  20%, 50% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 1;
   }
 }

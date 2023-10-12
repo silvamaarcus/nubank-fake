@@ -96,7 +96,7 @@ $container-s: 540px;
   flex: 5 1 360px;
 }
 .flex-item-auto {
-  flex: 1 1 auto;
+  flex: 2 1 auto;
 }
 
 // 4) Biblioteca para Largura.
@@ -167,5 +167,25 @@ $container-s: 540px;
   // aplicando responsividade para telas maiores.
   @include responsive(xl) {
     width: 100%;
+  }
+}
+
+.list-item {
+  list-style: none;
+  position: relative;
+
+  padding: 8px 8px 8px 72px;
+  margin-bottom: 48px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -8px;
+
+    display: block;
+
+    width: 64px;
+    height: 64px;
   }
 }
