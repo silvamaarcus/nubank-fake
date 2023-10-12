@@ -11,6 +11,7 @@ $height-card: 0.63 * $width-card;
   position: relative;
 }
 
+// Cartão animado.
 .card {
   width: $width-card;
   height: $height-card;
@@ -21,7 +22,7 @@ $height-card: 0.63 * $width-card;
 
   // Para o cartão ter como refêrencia de giro, o seu próprio centro.
   transform-origin: center center;
-  // Aplicar transformação em 3D.
+  // Aplicar efeito em 3D.
   transform-style: preserve-3d;
 
   background-color: transparent;
@@ -31,11 +32,11 @@ $height-card: 0.63 * $width-card;
     0px 0.500862px 10.0172px rgba(130, 38, 158, 0.035),
     0px 0.181152px 3.62304px rgba(130, 38, 158, 0.0243888);
 
-  // Criando animção para o 'flip-card', que é o template.
+  // Criando animção para o cartão (flip-card), que é o template, setando estilo ao cartão criado (change-bg-card).
   animation: flip-card 12s linear infinite alternate,
     change-bg-card 12s linear infinite alternate; // Arte do cartão, frente e verso.
 }
-
+// Executando função para o cartão ficar girando.
 @keyframes flip-card {
   0% {
     transform: rotateX(-10deg) rotateY(10deg) rotateX(-15deg);
@@ -50,12 +51,12 @@ $height-card: 0.63 * $width-card;
     transform: rotateX(190deg) rotateY(10deg) rotateX(15deg);
   }
 }
-
+// Executando função para aplicar estilo no cartão (arte do nubank).
 @keyframes change-bg-card {
   0%,
   40% {
     background-image: url("../svg/nubank.svg");
-    background-size: cover;
+    background-size: cover; //ocupar todo o elemento
   }
 
   50%,
@@ -65,6 +66,7 @@ $height-card: 0.63 * $width-card;
   }
 }
 
+// Estilo dos icones flutantes da tela.
 .icon-card-hero {
   position: absolute;
   top: -0px;
@@ -111,5 +113,36 @@ $height-card: 0.63 * $width-card;
   }
   100% {
     transform: translate3d(0, -40px, 0);
+  }
+}
+
+
+// Estilo para o fundo da section Hero (Retangulos brancos)
+.bg-home-blur1 {
+  transform: translate3d(0, -100px, 0);
+}
+.bg-home-blur2 {
+  transform: translate3d(0, -100px, 0);
+}
+
+.bg-home-rect1 {
+  animation: bg-home-rect 3s ease 0s infinite alternate;
+}
+.bg-home-rect2 {
+  animation: bg-home-rect 3s ease 0.5s infinite alternate;
+}
+.bg-home-rect3 {
+  animation: bg-home-rect 3s ease 1s infinite alternate;
+}
+.bg-home-rect4 {
+  animation: bg-home-rect 3s ease 1.5s infinite alternate;
+}
+
+@keyframes bg-home-rect {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 30px, 0);
   }
 }
