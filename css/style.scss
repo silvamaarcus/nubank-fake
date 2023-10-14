@@ -22,6 +22,7 @@ body {
   height: 100vh;
   position: relative;
   background-color: $white-dark;
+  overflow-x: hidden;
 }
 
 svg,

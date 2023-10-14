@@ -200,43 +200,55 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="photo"></div>
-          <h4>Jorge Silva</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, doloribus corrupti qui commodi placeat et assumenda quam exercitationem reiciendis sapiente sit.</p>
+          <div class="photo-profile photo-1"></div>
+          <h4 class="my-1">Anna Keller</h4>
+          <p class="my-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quis pellentesque vulputate at mattis nibh nulla est.
+            Pharetra, eget purus tortor nibh porta ipsum enim urna viverra.
+          </p>
         </div>
         <div class="swiper-slide">
-          <div class="swiper-slide">
-            <div class="photo"></div>
-            <h4>Jorge Silva</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, doloribus corrupti qui commodi placeat et assumenda quam exercitationem reiciendis sapiente sit.</p>
-          </div>
+          <div class="photo-profile photo-2"></div>
+          <h4 class="my-1">Gabriela Shuzz</h4>
+          <p class="my-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quis pellentesque vulputate at mattis nibh nulla est.
+            Pharetra, eget purus tortor nibh porta ipsum enim urna viverra.
+          </p>
         </div>
         <div class="swiper-slide">
-          <div class="swiper-slide">
-            <div class="photo"></div>
-            <h4>Jorge Silva</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, doloribus corrupti qui commodi placeat et assumenda quam exercitationem reiciendis sapiente sit.</p>
-          </div>
+          <div class="photo-profile photo-3"></div>
+          <h4 class="my-1">Théo Gomes</h4>
+          <p class="my-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quis pellentesque vulputate at mattis nibh nulla est.
+            Pharetra, eget purus tortor nibh porta ipsum enim urna viverra.
+          </p>
         </div>
         <div class="swiper-slide">
-          <div class="swiper-slide">
-            <div class="photo"></div>
-            <h4>Jorge Silva</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, doloribus corrupti qui commodi placeat et assumenda quam exercitationem reiciendis sapiente sit.</p>
-          </div>
+          <div class="photo-profile photo-4"></div>
+          <h4 class="my-1">Lia Vieira</h4>
+          <p class="my-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quis pellentesque vulputate at mattis nibh nulla est.
+            Pharetra, eget purus tortor nibh porta ipsum enim urna viverra.
+          </p>
         </div>
         <div class="swiper-slide">
-          <div class="swiper-slide">
-            <div class="photo"></div>
-            <h4>Jorge Silva</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, doloribus corrupti qui commodi placeat et assumenda quam exercitationem reiciendis sapiente sit.</p>
-          </div>
+          <div class="photo-profile photo-5"></div>
+          <h4 class="my-1">Marcela Sousa</h4>
+          <p class="my-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quis pellentesque vulputate at mattis nibh nulla est.
+            Pharetra, eget purus tortor nibh porta ipsum enim urna viverra.
+          </p>
         </div>
       </div>
-
-      <div class="button-next"></div>
-      <div class="button-prev"></div>
     </div>
+
+    <div class="button-next"></div>
+    <div class="button-prev"></div>
   </section>
 
   <!-- JS -->
@@ -246,8 +258,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-      slidesPerview: 'auto',
-      spaceBeteween: 40,
+      slidesPerView: 'auto',
+      spaceBetween: 40,
       grabCursor: true,
       pagination: {
         el: '.swiper-pagination',
@@ -255,10 +267,10 @@
         type: 'progressbar',
       },
       navigation: {
-        nextl: '.button-next',
-        prevl: '.button-prev',
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
       },
-    })
+    });
   </script>
 
 </body>
