@@ -48,6 +48,13 @@ $container-s: 540px;
 
 // 2) Biblioteca Flexbox | Item pai
 
+// Flexbox p/ que os elementos fiquem alinhados ao topo.
+.flex-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start !important;
+}
+
 // Flexbox p/ que os elementos fiquem alinhados da esquerda p/ direita.
 .flex-start {
   display: flex;
@@ -71,6 +78,12 @@ $container-s: 540px;
 // Flexbox p/ que os elementos quebrem a linha no container, quando necessario.
 .flex-wrap {
   flex-wrap: wrap;
+}
+// Flexbox p/ que os elementos fiquem em cada ponta da div.
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
 }
 
 // 3) Biblioteca Flexbox | Itens filhos
@@ -265,4 +278,24 @@ $container-s: 540px;
   @include responsive(l) {
     transform: scale(1.5);
   }
+}
+
+//FOOTER
+.list {
+  list-style: none;
+
+  li {
+    margin-bottom: 12px;
+  }
+  a {
+    color: $secondary-light;
+  }
+}
+
+footer {
+  background: linear-gradient(220.94deg, #a950c4 14.43%, #82269e 85.28%);
+}
+
+.bt-purple {
+  border-top: 1px solid $secondary-light;
 }
