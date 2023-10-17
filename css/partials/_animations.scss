@@ -290,3 +290,51 @@ $height-card: 0.63 * $width-card;
     transform: translate3d(10px, -40px, 0);
   }
 }
+
+// Section Card - FIGNU3
+.fignu3-card-verse {
+  // Fazer com que o Card movimente no centro do eixo X e Y do elemento.
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform: translate3d(0, -40px, 0) rotate(0deg);
+  animation: fignu3-card-verse-move 3s ease infinite alternate;
+}
+@keyframes fignu3-card-verse-move {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 20px, 0) rotate(5deg);
+  }
+}
+.fignu3-card-front {
+  // Fazer com que o Card movimente no centro do eixo X e Y do elemento.
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform: translate3d(0, -40px, 0) rotate(0deg);
+  animation: fignu3-card-front-move 3s ease 1s infinite alternate;
+}
+@keyframes fignu3-card-front-move {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 20px, 0) rotate(-5deg);
+  }
+}
+
+// Animação da sombra.
+.fignu3-shadow {
+  transform-origin: center center;
+  transform-box: fill-box;
+  fill-opacity: 0.15;
+  animation: fignu3-shadow 3s ease 1s infinite alternate;
+}
+@keyframes fignu3-shadow {
+  0% {
+    fill-opacity: 0.15;
+  }
+  100% {
+    fill-opacity: 0.4;
+  }
+}
