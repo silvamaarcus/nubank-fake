@@ -33,8 +33,12 @@ $height-card: 0.63 * $width-card;
     0px 0.181152px 3.62304px rgba(130, 38, 158, 0.0243888);
 
   // Criando animção para o cartão (flip-card), que é o template, setando estilo ao cartão criado (change-bg-card).
-  animation: flip-card 12s linear infinite alternate,
+  animation: flip-card 12s linear 10s infinite alternate,
     change-bg-card 12s linear infinite alternate; // Arte do cartão, frente e verso.
+
+    @include responsive(s) {
+      animation: none;
+    }
 }
 // Executando função para o cartão ficar girando.
 @keyframes flip-card {
@@ -102,6 +106,7 @@ $height-card: 0.63 * $width-card;
   @include responsive(s) {
     top: 350px;
     left: -100px;
+    animation: none;
   }
 
   animation: icons-home 7s ease 2.5s infinite alternate;

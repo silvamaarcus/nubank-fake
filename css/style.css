@@ -1192,7 +1192,12 @@ header {
   transform-style: preserve-3d;
   background-color: transparent;
   box-shadow: 0px 4px 80px rgba(130, 38, 158, 0.07), 0px 1.20588px 24.1177px rgba(130, 38, 158, 0.0456112), 0px 0.500862px 10.0172px rgba(130, 38, 158, 0.035), 0px 0.181152px 3.62304px rgba(130, 38, 158, 0.0243888);
-  animation: flip-card 12s linear infinite alternate, change-bg-card 12s linear infinite alternate;
+  animation: flip-card 12s linear 10s infinite alternate, change-bg-card 12s linear infinite alternate;
+}
+@media screen and (max-width: 960px) {
+  .card {
+    animation: none;
+  }
 }
 
 @keyframes flip-card {
@@ -1252,6 +1257,7 @@ header {
   .icon-mobile-hero {
     top: 350px;
     left: -100px;
+    animation: none;
   }
 }
 
