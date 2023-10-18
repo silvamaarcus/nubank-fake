@@ -155,6 +155,12 @@ $container-s: 540px;
   }
 }
 
+#header {
+  @include responsive(s) {
+    width: auto;
+  }
+}
+
 .hero {
   height: 90vh;
 
